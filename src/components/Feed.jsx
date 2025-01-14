@@ -10,6 +10,7 @@ const Feed = () => {
 
   useEffect(() => {
     const fetchVideos = async () => {
+      console.log(selectedCategory);
       const data = await fetchFromAPI(`search?part=snippet&q=${selectedCategory}`);
       setVideos(data.items);
     }
