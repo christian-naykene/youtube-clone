@@ -10,7 +10,7 @@ import {
 } from "../utils/constants";
 import { Link } from "react-router-dom";
 
-const ChannelCard = ({ channelDetail }) => {
+const ChannelCard = ({ channelDetail, marginTop }) => {
   console.log(channelDetail);
   return (
     <Box
@@ -26,6 +26,7 @@ const ChannelCard = ({ channelDetail }) => {
         },
         height: "326px",
         margin: "auto",
+        marginTop,
       }}
     >
       <Link to={`/channel/${channelDetail?.id?.channelId}`}>
