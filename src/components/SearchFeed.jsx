@@ -7,7 +7,7 @@ import { Videos } from "./";
 
 const SearchFeed = () => {
   const [videos, setVideos] = useState([]);
-  const { searchTerm } = useParams;
+  const { searchTerm } = useParams();
 
   useEffect(() => {
     const fetchVideos = async () => {
@@ -22,7 +22,7 @@ const SearchFeed = () => {
     <Box p={2} sx={{ overflow: "auto", height: "90vh", flex: 2 }}>
       <Typography variant="h4" fontWeight="bold" mb={2} sx={{ color: "white" }}>
         Search Results for:
-        <span style={{ color: "#F31503" }}>{searchTerm}</span> videos
+        <span style={{ color: "#F31503" }}> {searchTerm}</span> videos
       </Typography>
       <Videos videos={videos} />
     </Box>
